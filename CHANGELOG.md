@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## [1.0.0] - 2026-11-01
 
 ### Added
 - `ArcUk::Cinema.all` and `ArcUk::Cinema.new(id)` for Arc's cinemas, from the cinema menu and site codes on the Arc home page, with addresses from each venue's cinema info page and coordinates from OpenStreetMap.
