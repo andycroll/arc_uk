@@ -49,7 +49,8 @@ class ArcUk::PerformanceTest < Minitest::Test
   def test_summer_times_are_utc
     performance = performances_at('ARC_BEE').last
 
-    assert_equal 'Royal Ballet and Opera: Swan Lake', performance.film_name
+    assert_equal 'Swan Lake', performance.film_name
+    assert_equal Cinebase::Event.new(name: 'Royal Ballet and Opera'), performance.event
     assert_equal Time.utc(2027, 4, 22, 18, 15), performance.starting_at
     assert_equal %w(arts), performance.variant
   end
@@ -80,7 +81,7 @@ class ArcUk::PerformanceTest < Minitest::Test
   def test_language_from_the_title
     performance = performances_at('ARC_BEE').detect { |p| p.language == 'Polish' }
 
-    assert_equal 'JAK ZYC ZEBY NIE ZWARIOWAC', performance.film_name
+    assert_equal 'Jak Zyc Zeby Nie Zwariowac', performance.film_name
   end
 
   private
