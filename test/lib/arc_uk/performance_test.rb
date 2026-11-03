@@ -84,6 +84,18 @@ class ArcUk::PerformanceTest < Minitest::Test
     assert_equal 'Jak Zyc Zeby Nie Zwariowac', performance.film_name
   end
 
+  def test_nff_is_the_nottingham_film_festival
+    performance = ArcUk::Performance.new(
+      cinema_id: 'ARC_BEE',
+      cinema_name: 'Beeston',
+      film_name: 'Robin Hood Film Award Nominees Screening',
+      starting_at: Time.utc(2026, 11, 7, 19),
+      title: 'NFF- Robin Hood Film Award Nominees Screening'
+    )
+
+    assert_equal Cinebase::Festival.new(name: 'Nottingham Film Festival', year: 2026), performance.festival
+  end
+
   private
 
   def performances_at(cinema_id)
