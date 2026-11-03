@@ -52,6 +52,9 @@ module ArcUk
       'Infinity Vision' => 'infinity_vision'
     }.freeze
 
+    # Arc Beeston hosts the Nottingham Film Festival
+    FESTIVAL_NAMES = { 'NFF' => 'Nottingham Film Festival' }.freeze
+
     # @api private
     def self.cinema_class
       Cinema
@@ -65,6 +68,11 @@ module ArcUk
     # @api private
     def self.variants
       super.merge(VARIANTS)
+    end
+
+    # @api private
+    def self.festival_names
+      FESTIVAL_NAMES
     end
   end
 end

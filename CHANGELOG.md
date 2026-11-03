@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.2.0] - 2026-11-03
+
+### Changed
+- Uses cinebase 5.10. `NFF` titles name the Nottingham Film Festival, which Arc Beeston hosts.
+
 ## [1.1.0] - 2026-11-03
 
 ### Changed
