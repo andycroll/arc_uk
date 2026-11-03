@@ -23,7 +23,8 @@ module ArcUk
           /\s+[-–]\s+3D\z/i,                             # 3D copy
           /\s*\([^)]*\blanguages?\)/i,                   # language version
           /\s*\[?\b\d+(?:st|nd|rd|th) Anniversary\]?/i,  # anniversary re-release
-          /\s+4K Restoration\b/i                         # restoration
+          /\s+4K Restoration\b/i,                        # restoration
+          /\s+[-–]\s+(?:\w+\s+)*Premiere?\z/i            # premiere, e.g. "- NFF UK Premier"
         ] + COMMON_REMOVE
       end
 
